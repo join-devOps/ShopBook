@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ShopBooks.Core\ShopBooks.Core.csproj">
-      <Project>{1cbca7b4-f148-4028-8c36-c8a57e26702c}</Project>
-      <Name>ShopBooks.Core</Name>
+    <ProjectReference Include="..\ShopBooks\ShopBooks.csproj">
+      <Project>{47fe83f7-58ae-4242-ba45-d92c7837b72e}</Project>
+      <Name>ShopBooks</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -17,13 +17,16 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal"
-                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Visibility="{Binding GetSelectedBooks}">
 
             <StackPanel>
-                <TextBlock Text="Количество выбранных книг: "/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Количество выбранных книг: "/>
+                    <TextBlock Text="{Binding Count}"/>
+                </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Размер покупки: "/>
                     <TextBlock Text="{Binding Sum}"/>
@@ -31,8 +34,10 @@
                 <TextBlock Text="Размер скидки: "/>
             </StackPanel>
 
-            <Button Content="Заказать"
-                    Command="{Binding CommandShow}"
+            <Button Content="Добавить в корзину"
+                Height="25" Width="150"/>
+
+            <Button Content="Просмотр в корзине"
                 Height="25" Width="150"/>
         </StackPanel>
 
@@ -40,7 +45,7 @@
                   Height="auto"
                   SelectionMode="Multiple"
                   ItemsSource="{Binding BooksList}"
-                  SelectedItem="{Binding BooksSelectedItems}"
+                  SelectedItem="{Binding BooksSelectedItems, Mode=OneWay}"
                   VerticalAlignment="Stretch" 
                   Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="2" 
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
@@ -52,7 +57,9 @@
                         <WrapPanel>
                             <Grid Height="175" Width="690">
                                 
-                                <StackPanel Orientation="Horizontal" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <StackPanel Orientation="Horizontal" 
+                                            ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    
                                     <Image Source="{Binding GetImage}"
                                            Height="50" Width="75"/>
                                     

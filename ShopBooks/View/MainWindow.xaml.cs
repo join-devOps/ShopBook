@@ -13,5 +13,7 @@ namespace ShopBooks.View
             InitializeComponent();
             DataContext = new MainViewModel();
         }
+
+
     }
 }

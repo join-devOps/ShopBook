@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using ShopBooks;
 
 namespace ShopBooks.Test
 {
@@ -9,7 +10,7 @@ namespace ShopBooks.Test
         [TestMethod]
         public void TestMethod1()
         {
-
+            
         }
     }
 }

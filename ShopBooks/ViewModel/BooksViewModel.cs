@@ -8,15 +8,6 @@ namespace ShopBooks.ViewModel
 {
     class BooksViewModel : CorePropertyChanged
     {
-        private RelayCommand _CommandShow;
-        public RelayCommand CommandShow
-        {
-            get => _CommandShow ?? (_CommandShow = new RelayCommand(o => 
-            {
-                new ToBuyViewModel(BooksSelectedItems);
-            }));
-        }
-
         private List<Books> _BooksList;
         public List<Books> BooksList
         {
@@ -24,7 +15,7 @@ namespace ShopBooks.ViewModel
             set
             {
                 _BooksList = value;
-                OnPropertyChanged();
+                OnPropertyChanged("BooksList");
             }
         }
 
@@ -36,17 +27,19 @@ namespace ShopBooks.ViewModel
             {
                 _IsSelected = value;
                 OnPropertyChanged("IsSelected");
+                OnPropertyChanged("GetSelectedBooks");
             }
         }
 
-        private int _Sum;
-        public int Sum
+        private int? _Sum;
+        public int? Sum
         {
             get => _Sum;
             set
             {
                 _Sum = value;
                 OnPropertyChanged("Sum");
+                OnPropertyChanged("BooksSelectedItems");
             }
         }
 
@@ -62,17 +55,20 @@ namespace ShopBooks.ViewModel
             }
         }
 
-        private List<Books> _BooksSelectedItems;
-        public List<Books> BooksSelectedItems
+        private Books _BooksSelectedItems;
+        public Books BooksSelectedItems
         {
             get
             {
                 if (_BooksSelectedItems == null)
+                {
                     IsSelected = true;
+                }
                 else
                 {
                     IsSelected = false;
-                    Count = 0;
+
+                    Sum = _BooksSelectedItems.Cost;
                 }
 
                 return _BooksSelectedItems;
@@ -82,6 +78,8 @@ namespace ShopBooks.ViewModel
                 _BooksSelectedItems = value;
                 OnPropertyChanged("BooksSelectedItems");
                 OnPropertyChanged("GetSelectedBooks");
+                OnPropertyChanged("IsSelected");
+                OnPropertyChanged("Sum");
             }
         }
 
