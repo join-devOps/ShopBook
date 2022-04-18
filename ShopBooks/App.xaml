@@ -1,0 +1,18 @@
+﻿<Application x:Class="ShopBooks.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ShopBooks"
+             xmlns:viewmodel="clr-namespace:ShopBooks.ViewModel"
+             xmlns:view="clr-namespace:ShopBooks.View"
+             StartupUri="View/MainWindow.xaml">
+    
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:BooksViewModel}">
+            <view:BooksView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:ToBuyViewModel}">
+            <view:ToBuyView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

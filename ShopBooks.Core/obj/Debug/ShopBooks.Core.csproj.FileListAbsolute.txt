@@ -1,0 +1,8 @@
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\bin\Debug\ShopBooks.Core.dll
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\bin\Debug\ShopBooks.Core.pdb
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\obj\Debug\ShopBooks.Core.Properties.Resources.resources
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\obj\Debug\ShopBooks.Core.csproj.GenerateResource.cache
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\obj\Debug\ShopBooks.Core.csproj.CoreCompileInputs.cache
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\obj\Debug\ShopBooks.Core.dll
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\obj\Debug\ShopBooks.Core.pdb
+C:\Users\ProderMe\Desktop\Exam\App\ShopBooks.Core\obj\Debug\ShopBooks.Core.csproj.AssemblyReference.cache
